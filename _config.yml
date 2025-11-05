@@ -1,38 +1,27 @@
-# site settings
+# Site Settings
 title: Hritwik Ekade
-subtitle: by HTML5 UP
 email: ekadehritwik@gmail.com
-description: Business Technology Analyst with a background in Computer Engineering, specializing in full-stack development and data optimization for large-scale financial systems.
-baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
-url: # the base hostname & protocol for your site
-# author:
-# street_address: 1234 Somewhere Road
-# city: Nashville
-# state: TN
-# zip_code: 55555
-# country: United States of America
-# phone: (716) 555-5555
+description: > # This description appears in your browser tab/search results
+  Business Technology Analyst with a background in Computer Engineering, specializing in full-stack development and data optimization for large-scale financial systems.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://HritwikEkade.github.io" # the base hostname & protocol for your site
+timezone: America/New_York
 
-# homepage tiles
-tiles-source: pages # accepts "posts" or "pages"
-tiles-count: 6
+# Theme Settings (If using a Jekyll Theme)
+# If you are using the Forty theme, make sure to add this line or similar:
+# remote_theme: andrewbanchich/forty-jekyll-theme 
 
-# social settings (key must match name of font awesome icon)
-# see https://fontawesome.com/icons?d=gallery&p=2&s=brands
-# Icons are not shown if value is empty
-# You need to restart jekyll for changes to have an effect
-socials:
-  GitHub: https://github.com/HritwikEkade
-  LinkedIn: https://www.linkedin.com/in/hritwikekade/
+# Contact Details
+github_username: HritwikEkade
+linkedin_username: hritwikekade
+scholar_google: https://scholar.google.com/citations?user=xHO1YY8AAAAJ&hl=en # Custom field for Google Scholar
+phone: "+1 (412) 339-7388"
+address: "Pittsburgh, PA"
 
-# build settings
+# Additional Features
+# Example for Forty: Set which content to show on the tiles
+# tiles-source: 'posts' # Set to 'pages' if you create portfolio sections as pages
+
+# Build settings
 markdown: kramdown
-
-sass:
-  style: compressed
-
-exclude:
-- "*.gemspec"
-- LICENSE.md
-- CONTRIBUTING.md
-- README.md 
+permalink: pretty
