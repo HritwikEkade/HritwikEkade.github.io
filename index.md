@@ -62,6 +62,3 @@ I utilize my technical expertise to tackle complex problems in **Technology Cons
 * **Technical Leadership:** Led the **CodeCell Design Team**, organizing Hackathons/Workshops with sponsors like **GitHub** and **Google Cloud** for 150+ participants.
 * **Publications:** Published work on **Time Series Modeling** (EVs/GHG impact) and an **AI-driven Question Answering Bot** (ASR/BERT/ALBERT architecture).
 
----
-
-Please **Commit** this final `index.md` file and the change to your `_config.yml`. Your website should now load with the style you requested in 5-10 minutes.
