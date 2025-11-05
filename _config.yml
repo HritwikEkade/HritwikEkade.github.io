@@ -26,3 +26,6 @@ address: "Pittsburgh, PA"
 # Build settings
 markdown: kramdown
 permalink: pretty
+theme: jekyll-theme-forty 
+# OR sometimes this is required for external themes
+# remote_theme: andrewbanchich/forty-jekyll-theme
