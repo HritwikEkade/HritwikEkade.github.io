@@ -30,8 +30,7 @@ permalink: pretty
 # Temporarily remove or comment out:
 # remote_theme: andrewbanchich/forty-jekyll-theme 
 
-# Use a highly-rated, responsive single-page portfolio theme
-remote_theme: dops-m/resume-theme
+theme: jekyll-theme-primer
 
 plugins:
   - jekyll-remote-theme
