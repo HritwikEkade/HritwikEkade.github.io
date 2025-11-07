@@ -1,255 +1,129 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Hritwik Ekade — Portfolio</title>
-  <meta name="description" content="Hritwik Ekade — MISM student & software engineer. Projects, resume, blog." />
-  <!-- inline SVG favicon (HE mark) -->
-  <link rel="icon" href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96"><rect width="96" height="96" rx="18" fill="%236366f1"/><text x="48" y="58" font-family="Arial, Helvetica, sans-serif" font-size="44" fill="white" font-weight="700" text-anchor="middle">HE</text></svg>'>
-
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hritwik Ekade | Portfolio</title>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a class="brand" href="#hero">Hritwik Ekade</a>
-
-      <nav id="nav" class="nav">
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
-
-      <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h16" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>
-      </button>
-    </div>
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hritwik Ekade</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section id="hero" class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-left">
-          <h1>Hi — I’m <span class="accent">Hritwik Ekade</span></h1>
-          <p class="lead">MISM student at Carnegie Mellon • Software Engineer experienced in backend engineering, ML model development, and high-volume data pipelines. I build secure, scalable systems and take ML from research to production.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <img src="assets/profile.jpg" alt="Profile Photo" class="profile-pic" />
+    <h1>Hi, I’m <span>Hritwik Ekade</span></h1>
+    <p>Consultant @ Deloitte | MISM Student @ Carnegie Mellon University</p>
+    <a href="resume.pdf" class="btn" download>📄 Download Resume</a>
+  </section>
 
-          <div class="actions">
-            <a class="btn btn-primary" href="#projects">See Projects</a>
-            <a class="btn" href="#experience">View Resume</a>
-            <a class="btn btn-outline" href="resume.pdf" download>Download Resume</a>
-          </div>
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      I’m pursuing a Master of Information Systems Management at Carnegie Mellon University (2026),
+      with experience in backend engineering, data pipelines, and cloud security. Previously, I worked
+      at Deloitte developing large-scale systems serving 350K+ users and managing over $40B in assets.
+      I’m passionate about solving complex system challenges and applying data-driven insights.
+    </p>
+  </section>
 
-          <div class="skill-chips" aria-hidden="true">
-            <span>Python</span><span>Java</span><span>C#</span><span>PyTorch</span><span>AWS</span><span>React</span>
-          </div>
-
-          <ul class="social-inline">
-            <li><a href="https://github.com/HritwikEkade" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/hritwikekade/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a></li>
-          </ul>
-        </div>
-
-        <aside class="hero-right">
-          <div class="card profile-card" role="region" aria-label="Profile card">
-            <div class="avatar">
-              <img src="assets/profile.jpg"
-                   alt="Hritwik Ekade"
-                   onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect width=%22200%22 height=%22200%22 rx=%2220%22 fill=%22%23eef2ff%22/><text x=%2250%22 y=%22112%22 font-family=%22Arial%22 font-size=%2244%22 fill=%22%236366f1%22>HE</text></svg>'">
-            </div>
-            <h3>Hritwik Ekade</h3>
-            <p class="muted">MISM @ Carnegie Mellon • Software Engineer</p>
-
-            <div class="profile-links">
-              <a href="mailto:ekadehritwik@gmail.com" id="email-btn">ekadehritwik@gmail.com</a>
-              <a href="tel:+14123397388">+1 (412) 339-7388</a>
-            </div>
-
-            <div class="quick-links">
-              <a href="#projects">Featured Projects</a>
-              <a href="resume.pdf" download>Download CV</a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section card-wrap">
-      <div class="wrap">
-        <h2>About Me</h2>
-        <p>I am pursuing a Master of Information Systems Management at Carnegie Mellon University. I hold a Bachelor’s in Computer Engineering from University of Mumbai and have professional experience at Deloitte working on backend systems, compliance-driven public sector applications, and large-scale data pipelines. I enjoy combining robust engineering with practical ML to deliver production-ready solutions.</p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section id="skills" class="section">
-      <div class="wrap two-grid">
-        <div class="card">
-          <h3>Technical Skills</h3>
-          <div class="skill-list">
-            <div><strong>Languages & ML:</strong> Python, Java, C#, PyTorch, TensorFlow, Keras, Scikit-learn</div>
-            <div><strong>Datastack:</strong> SQL, MongoDB, ETL, Data Warehousing, Big Data, A/B Testing</div>
-            <div><strong>Web & DevOps:</strong> REST APIs, Django, Flask, React, Docker, Kubernetes, AWS, Azure</div>
-          </div>
-        </div>
-
-        <div class="card">
-          <h3>Coursework Highlights</h3>
-          <ul class="plain">
-            <li>Object-Oriented Programming (Java), Data-Focused Python, Database Management</li>
-            <li>Cloud Security, Advanced AI & Business Strategy, Statistics for IT Managers</li>
-            <li>Advanced Data Structures, NLP, HCI, Operating Systems</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="section card-wrap">
-      <div class="wrap">
-        <h2>Experience</h2>
-
-        <div class="exp-grid">
-          <article class="exp-card card">
-            <header>
-              <strong>Deloitte — Consultant</strong>
-              <span class="date">Dec 2022 — Aug 2025</span>
-            </header>
-            <ul>
-              <li>Built .NET Core retirement system for U.S. State Dept (350K+ users, $40B+ assets) — security & compliance.</li>
-              <li>Implemented SQL optimizations and backend caching, reducing transaction latency by ~200ms.</li>
-              <li>Optimized data pipelines (1M+ record batches), cutting runtime by 30% and downtime by 20%.</li>
-            </ul>
-          </article>
-
-          <article class="exp-card card">
-            <header>
-              <strong>IIT Kharagpur — Machine Learning Intern</strong>
-              <span class="date">Jun 2020 — Aug 2020</span>
-            </header>
-            <ul>
-              <li>Developed CNN (TensorFlow/Keras) for plant leaf count prediction (92% accuracy) and improved robustness through preprocessing and augmentation.</li>
-            </ul>
-          </article>
-
-          <article class="exp-card card">
-            <header>
-              <strong>VESIT — Python Developer Intern</strong>
-              <span class="date">Nov 2019 — Dec 2019</span>
-            </header>
-            <ul>
-              <li>Automated Leaving Certificate generation with Python + Tesseract OCR; reduced processing time by 80%.</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section">
-      <div class="wrap">
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-          <!-- Educational Query Bot -->
-          <article class="project card">
-            <div class="project-media"><img src="assets/placeholder.svg" alt="Educational Query Bot"></div>
-            <h3>Educational Query Bot</h3>
-            <p>End-to-end NLP Q&A system: transcribes lecture videos (ASR), indexes embeddings (BERT), and retrieves context-aware answers using ALBERT for efficiency.</p>
-            <div class="meta"><span>Python</span><span>BERT</span><span>ASR</span><span>Flask</span></div>
-            <div class="links">
-              <a href="projects.html#edu-bot" class="link">Show project</a>
-              <a href="#" class="link">GitHub</a>
-            </div>
-          </article>
-
-          <!-- EVs, GHG -->
-          <article class="project card">
-            <div class="project-media"><img src="assets/placeholder.svg" alt="EVs GHG"></div>
-            <h3>EVs, GHG & Indian Auto Sector</h3>
-            <p>Time-series forecasting using ARIMA/Prophet to model EV adoption’s impact on GHG emissions — policy recommendations and IEEE publication.</p>
-            <div class="meta"><span>Python</span><span>Prophet</span></div>
-            <div class="links">
-              <a href="projects.html#ev-ghg" class="link">Show project</a>
-              <a href="#" class="link">Paper</a>
-            </div>
-          </article>
-
-          <!-- SRCNN -->
-          <article class="project card">
-            <div class="project-media"><img src="assets/placeholder.svg" alt="SRCNN"></div>
-            <h3>Image Super Resolution (SRCNN)</h3>
-            <p>Implemented SRCNN (Keras) to recover high-resolution images from low-resolution inputs; evaluated with PSNR, MSE and SSIM. Paper: arXiv:1501.00092.</p>
-            <div class="meta"><span>Keras</span><span>TensorFlow</span></div>
-            <div class="links">
-              <a href="projects.html#srcnn" class="link">Show project</a>
-              <a href="https://arxiv.org/abs/1501.00092" class="link" target="_blank" rel="noopener">Paper</a>
-            </div>
-          </article>
-
-          <!-- Life Expectancy -->
-          <article class="project card">
-            <div class="project-media"><img src="assets/placeholder.svg" alt="Life Expectancy"></div>
-            <h3>Life Expectancy Prediction</h3>
-            <p>Explored ML approaches to predict life expectancy using WHO data — compared regressions, ensemble methods, cross-validation, and feature engineering.</p>
-            <div class="meta"><span>Scikit-learn</span><span>Pandas</span></div>
-            <div class="links">
-              <a href="projects.html#life-exp" class="link">Show project</a>
-              <a href="#" class="link">GitHub</a>
-            </div>
-          </article>
-
-          <!-- OCR -->
-          <article class="project card">
-            <div class="project-media"><img src="assets/placeholder.svg" alt="OCR"></div>
-            <h3>Optical Character Recognition (OCR)</h3>
-            <p>Automated Leaving Certificate generation: validate uploaded documents (images/PDF) with Tesseract OCR and generate formatted certificates.</p>
-            <div class="meta"><span>Tesseract</span><span>OpenCV</span></div>
-            <div class="links">
-              <a href="projects.html#ocr" class="link">Show project</a>
-              <a href="#" class="link">GitHub</a>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section card-wrap">
-      <div class="wrap">
-        <h2>Contact</h2>
-        <p>If you'd like to collaborate or hire me, email <a href="mailto:ekadehritwik@gmail.com">ekadehritwik@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/hritwikekade/" target="_blank" rel="noopener">LinkedIn</a>.</p>
-
-        <div class="contact-grid">
-          <div class="card">
-            <h4>Reach</h4>
-            <p><strong>Email:</strong> <a href="mailto:ekadehritwik@gmail.com">ekadehritwik@gmail.com</a></p>
-            <p><strong>Phone:</strong> +1 (412) 339-7388</p>
-            <a class="btn btn-outline" href="resume.pdf" download>Download Resume (PDF)</a>
-          </div>
-
-          <div class="card">
-            <h4>Profiles</h4>
-            <p><a href="https://github.com/HritwikEkade" target="_blank" rel="noopener">GitHub</a></p>
-            <p><a href="https://www.linkedin.com/in/hritwikekade/" target="_blank" rel="noopener">LinkedIn</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div>© <span id="year"></span> Hritwik Ekade</div>
-      <div class="muted">Built with care • Hosted on GitHub Pages</div>
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>Technical Skills</h2>
+    <div class="skills-grid">
+      <span>Python</span>
+      <span>Java</span>
+      <span>C#</span>
+      <span>TensorFlow</span>
+      <span>PyTorch</span>
+      <span>ReactJS</span>
+      <span>SQL</span>
+      <span>MongoDB</span>
+      <span>Docker</span>
+      <span>AWS</span>
+      <span>Azure</span>
+      <span>Flask</span>
     </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="section">
+    <h2>Experience</h2>
+    <div class="exp-card">
+      <h3>Deloitte | Consultant</h3>
+      <p><em>Dec 2022 – Aug 2025</em></p>
+      <ul>
+        <li>Developed .NET Core retirement system serving 350K+ users, ensuring compliance with U.S. federal security standards.</li>
+        <li>Implemented backend caching and SQL optimization reducing transaction latency by 200ms.</li>
+        <li>Optimized data pipeline of 1M+ record batch jobs, cutting runtime by 30%.</li>
+      </ul>
+    </div>
+    <div class="exp-card">
+      <h3>IIT Kharagpur | ML Intern</h3>
+      <p><em>Jun 2020 – Aug 2020</em></p>
+      <ul>
+        <li>Built CNN (TensorFlow/Keras) for leaf-count prediction with 92% accuracy.</li>
+        <li>Automated data augmentation reducing training time by 20%.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>Image Super Resolution</h3>
+        <p>Implemented SRCNN in Keras for recovering high-resolution images from low-resolution inputs. Evaluated using PSNR, MSE, and SSIM metrics.</p>
+        <a href="https://arxiv.org/abs/1501.00092" target="_blank" class="project-btn">View Paper</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Life Expectancy Prediction</h3>
+        <p>Developed machine learning models using WHO data to predict life expectancy with multiple regression and feature analysis.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Optical Character Recognition (OCR)</h3>
+        <p>Automated document validation for certificate generation using Tesseract OCR, reducing processing time by 80%.</p>
+      </div>
+
+      <div class="project-card">
+        <h3>Educational Query Bot</h3>
+        <p>AI-driven Q&A system using BERT and ALBERT to process video lecture content and provide automated answers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2>Contact</h2>
+    <p>Let’s connect and discuss ideas, opportunities, or collaborations!</p>
+    <div class="socials">
+      <a href="mailto:ekadehritwik@gmail.com">📧 Email</a>
+      <a href="https://www.linkedin.com/in/hritwikekade/" target="_blank">💼 LinkedIn</a>
+      <a href="https://github.com/HritwikEkade" target="_blank">🐙 GitHub</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Hritwik Ekade. All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>
