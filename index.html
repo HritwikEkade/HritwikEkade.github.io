@@ -1,106 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hritwik Ekade | Portfolio</title>
-  <link rel="icon" href="images/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hritwik Ekade | Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Optional: Customizing Tailwind theme if needed.
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1e293b', // Slate-800
+                        'secondary-light': '#94a3b8', // Slate-400
+                        'accent': '#3b82f6', // Blue-500
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Optional: Custom scroll behavior for the page */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for the fixed header */
+        .header-bg {
+            backdrop-filter: blur(10px);
+            background-color: rgba(30, 41, 59, 0.8); /* Primary dark with slight transparency */
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Hritwik Ekade</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<body class="bg-primary-dark text-white font-sans min-h-screen">
 
-  <section class="hero" id="home">
-    <img src="images/profile.jpg" alt="Profile Picture">
-    <h2>Hi, I'm Hritwik Ekade</h2>
-    <h3>Consultant @ Deloitte | Aspiring Tech Leader | MISM @ CMU</h3>
-    <a href="resume/Hritwik_Ekade_Resume.pdf" class="resume-btn" download>Download Resume</a>
-  </section>
+    <!-- Header & Navigation -->
+    <header class="header-bg sticky top-0 z-50 shadow-lg">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-xl font-bold text-accent hover:text-white transition duration-300">
+                HE
+            </a>
+            <div class="space-x-4 flex">
+                <a href="#about" class="text-secondary-light hover:text-white transition duration-300 rounded-lg p-2">About</a>
+                <a href="#projects" class="text-secondary-light hover:text-white transition duration-300 rounded-lg p-2">Projects</a>
+                <a href="#contact" class="text-secondary-light hover:text-white transition duration-300 rounded-lg p-2">Contact</a>
+            </div>
+        </nav>
+    </header>
 
-  <section id="about">
-    <h2 class="section-title">About Me</h2>
-    <p>Currently pursuing my Master of Information Systems Management at Carnegie Mellon University, I have 2+ years of consulting and software development experience at Deloitte, focusing on backend optimization, cloud computing, and system security. Passionate about leveraging AI and scalable technology to solve real-world problems.</p>
-  </section>
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-  <section id="skills" class="skills">
-    <h2 class="section-title">Skills</h2>
-    <ul>
-      <li>Python</li>
-      <li>Java</li>
-      <li>C#</li>
-      <li>ReactJS</li>
-      <li>Django</li>
-      <li>AWS</li>
-      <li>SQL</li>
-      <li>Docker</li>
-      <li>TensorFlow</li>
-      <li>Machine Learning</li>
-    </ul>
-  </section>
+        <!-- 1. Hero Section (Home) -->
+        <section id="home" class="py-24 md:py-36 text-center">
+            <div class="space-y-6">
+                <!-- Placeholder Image/Avatar -->
+                <div class="mx-auto w-32 h-32 rounded-full overflow-hidden border-4 border-accent shadow-2xl">
+                    <img src="https://placehold.co/128x128/3b82f6/ffffff?text=HE" alt="Hritwik Ekade Profile Picture" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/128x128/3b82f6/ffffff?text=HE';">
+                </div>
+                <p class="text-xl text-secondary-light">Hello, I'm</p>
+                <h1 class="text-5xl sm:text-7xl font-extrabold tracking-tight">
+                    <span class="block text-white">Hritwik Ekade</span>
+                </h1>
+                <h2 class="text-2xl sm:text-3xl font-light text-accent">
+                    Consultant & <span class="font-semibold">Machine Learning Specialist</span>
+                </h2>
+                <a href="#projects" class="inline-block mt-8 px-8 py-3 bg-accent text-white font-semibold rounded-full shadow-lg hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                    View My Work
+                </a>
+            </div>
+        </section>
 
-  <section id="experience" class="experience">
-    <h2 class="section-title">Experience</h2>
-    <ul>
-      <li><strong>Deloitte, Consultant</strong> — Developed secure .NET Core systems for 350K+ users; optimized SQL backend reducing latency by 200ms.</li>
-      <li><strong>IIT Kharagpur, Machine Learning Intern</strong> — Built CNN for plant leaf count prediction, achieving 92% accuracy.</li>
-      <li><strong>VESIT, Python Developer Intern</strong> — Automated document validation and certificate generation using OCR.</li>
-    </ul>
-  </section>
+        <!-- Separator -->
+        <hr class="border-secondary-light opacity-20 my-10" />
 
-  <section id="projects" class="projects">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="images/superres.jpg" alt="Image Super Resolution">
-        <h3>Image Super Resolution</h3>
-        <p>Implemented SRCNN (Keras) for recovering high-resolution images. Evaluated with PSNR, MSE, and SSIM metrics. <a href="https://arxiv.org/abs/1501.00092" target="_blank">Read Paper</a></p>
-      </div>
-      <div class="project-card">
-        <img src="images/lifeexpectancy.jpg" alt="Life Expectancy Prediction">
-        <h3>Life Expectancy Prediction</h3>
-        <p>Applied multiple ML models on WHO dataset to predict life expectancy trends. Analyzed health and socio-economic indicators.</p>
-      </div>
-      <div class="project-card">
-        <img src="images/ocr.jpg" alt="Optical Character Recognition">
-        <h3>Optical Character Recognition</h3>
-        <p>Automated certificate generation by validating document authenticity using Python + Tesseract OCR.</p>
-      </div>
-      <div class="project-card">
-        <img src="images/ev.jpg" alt="EV GHG Analysis">
-        <h3>EVs, GHG, and Indian Auto Sector</h3>
-        <p>Built forecasting models (ARIMA/Prophet) analyzing EV impact on greenhouse gas emissions. Published on IEEE Xplore.</p>
-      </div>
-      <div class="project-card">
-        <img src="images/querybot.jpg" alt="Educational Query Bot">
-        <h3>Educational Query Bot</h3>
-        <p>AI-driven Q&A system using BERT and ALBERT for contextual question answering from educational videos. IEEE publication.</p>
-      </div>
-    </div>
-  </section>
+        <!-- 2. About Me Section -->
+        <section id="about" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent">About Me</h2>
+            <div class="bg-slate-800 p-8 rounded-xl shadow-2xl">
+                <p class="text-lg text-secondary-light leading-relaxed mb-6">
+                    I am an Information Systems Management student at Carnegie Mellon University, bringing three years of professional experience as a **Consultant at Deloitte**. My core expertise lies in developing secure, high-performance back-end systems (C#/.NET Core), driving **data pipeline optimization** (reducing processing runtime by 30%), and ensuring federal security compliance for systems managing over \$40B in assets.
+                </p>
+                <p class="text-lg text-secondary-light leading-relaxed">
+                    I combine my robust enterprise background with deep skills in **Machine Learning and Data Science**, specializing in **NLP systems** (BERT/ALBERT), Time Series Forecasting (ARIMA/Prophet), and high-accuracy CNN models for image classification. I am passionate about leveraging technology to solve complex business and engineering challenges.
+                </p>
 
-  <section id="contact" class="contact">
-    <h2 class="section-title">Contact</h2>
-    <p>Let's connect! Reach out to me via email or find me on my professional profiles below.</p>
-    <p>Email: <a href="mailto:ekadehritwik@gmail.com">ekadehritwik@gmail.com</a></p>
-    <p>
-      <a href="https://www.linkedin.com/in/hritwikekade/" target="_blank">LinkedIn</a> |
-      <a href="https://github.com/HritwikEkade" target="_blank">GitHub</a>
-    </p>
-  </section>
+                <h3 class="text-2xl font-semibold mt-10 mb-6 text-white">My Toolkit</h3>
+                <div class="flex flex-wrap gap-3">
+                    <!-- Tech Stack Pills based on Resume -->
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">Python / Java / C#</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">PyTorch / TensorFlow / Keras</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">SQL / MongoDB / ETL</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">AWS / Azure / Cloud Computing</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">Docker / Kubernetes / CI/CD</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">ReactJS / Django / Flask</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">Scikit-learn / Pandas / NumPy</span>
+                    <span class="bg-gray-700 text-sm px-4 py-1 rounded-full shadow-md">BERT / ALBERT / NLTK</span>
+                </div>
+            </div>
+        </section>
 
-  <footer>
-    <p>© 2025 Hritwik Ekade | Designed with 💜</p>
-  </footer>
-  <script src="script.js"></script>
+        <!-- Separator -->
+        <hr class="border-secondary-light opacity-20 my-10" />
+
+        <!-- 3. Projects Section (Updated with specific project details) -->
+        <section id="projects" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent">Academic & Research Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Project Card 1: Educational Query Bot -->
+                <div class="bg-slate-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-accent/50 transition duration-300">
+                    <img src="https://placehold.co/600x350/1f2937/ffffff?text=AI+Query+Bot" alt="Educational Query Bot Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">AI-Driven Educational Query Bot (NLP)</h3>
+                        <p class="text-secondary-light mb-4 text-sm">Developed an end-to-end, AI-driven Question Answering (QA) system that processed video lecture content. Designed a multi-module NLP architecture integrating **ASR**, **BERT-based similarity**, and **ALBERT** models for efficient contextual query resolution.</p>
+                        <a href="#" target="_blank" class="text-accent hover:text-blue-400 font-medium inline-flex items-center">
+                            View IEEE Publication
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-2h4m0 0l-7-7m7 7L10 6"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2: EVs, GHG, and Indian Auto Sector -->
+                <div class="bg-slate-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-accent/50 transition duration-300">
+                    <img src="https://placehold.co/600x350/1f2937/ffffff?text=Time+Series+GHG" alt="Time Series Forecasting Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">EV Impact Forecasting (Time Series Modeling)</h3>
+                        <p class="text-secondary-light mb-4 text-sm">Engineered and trained **Time Series Forecasting models (ARIMA/Prophet)** to predict the impact of EV adoption on Greenhouse Gas (GHG) emissions across the Indian auto sector. Used Scikit-learn for policy analytics to provide data-driven policy recommendations.</p>
+                        <a href="#" target="_blank" class="text-accent hover:text-blue-400 font-medium inline-flex items-center">
+                            View IEEE Publication
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-2h4m0 0l-7-7m7 7L10 6"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3: Optical Character Recognition (OCR) -->
+                <div class="bg-slate-800 rounded-xl shadow-2xl overflow-hidden hover:shadow-accent/50 transition duration-300">
+                    <img src="https://placehold.co/600x350/1f2937/ffffff?text=OCR+Automation" alt="OCR Automation Screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-white mb-2">Document Automation using Tesseract OCR</h3>
+                        <p class="text-secondary-light mb-4 text-sm">Automated the Leaving Certificate generation process for VESIT. Developed a Python module utilizing **Tesseract OCR** to validate and process over **100 documents per day**, resulting in an **80% reduction** in manual processing time.</p>
+                        <a href="#" target="_blank" class="text-accent hover:text-blue-400 font-medium inline-flex items-center">
+                            View Project Details
+                            <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4m-4-2h4m0 0l-7-7m7 7L10 6"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Separator -->
+        <hr class="border-secondary-light opacity-20 my-10" />
+
+        <!-- 4. Contact Section -->
+        <section id="contact" class="py-16">
+            <h2 class="text-4xl font-bold text-center mb-12 text-accent">Get In Touch</h2>
+            <div class="max-w-xl mx-auto text-center">
+                <p class="text-lg text-secondary-light mb-8">
+                    I'm currently seeking new opportunities, particularly in roles combining my background in enterprise software consulting and data science/ML.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="mailto:ekadehritwik@gmail.com" class="px-6 py-3 bg-accent text-white font-semibold rounded-lg shadow-md hover:bg-blue-600 transition duration-300 transform hover:scale-105">
+                        Send Email
+                    </a>
+                    <a href="https://linkedin.com/in/hritwikekade/" target="_blank" class="px-6 py-3 border border-secondary-light text-secondary-light font-semibold rounded-lg shadow-md hover:bg-slate-700 transition duration-300 transform hover:scale-105">
+                        Connect on LinkedIn
+                    </a>
+                </div>
+
+                <div class="mt-8 text-secondary-light text-sm space-y-2">
+                    <p>Or find me online:</p>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://scholar.google.com" target="_blank" class="hover:text-white transition duration-200">Google Scholar</a>
+                        <a href="https://github.com/yourusername" target="_blank" class="hover:text-white transition duration-200">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-20 py-8 border-t border-slate-700 text-center">
+        <p class="text-sm text-secondary-light">
+            © <span id="current-year"></span> Hritwik Ekade. Built with ❤️ and Tailwind CSS.
+        </p>
+    </footer>
+
+    <script>
+        // Set the current year in the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Optional: Add simple scroll-to-top functionality (not strictly necessary with smooth scroll, but good practice)
+        const header = document.querySelector('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-xl');
+            } else {
+                header.classList.remove('shadow-xl');
+            }
+        });
+    </script>
 </body>
 </html>
