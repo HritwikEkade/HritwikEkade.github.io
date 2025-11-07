@@ -4,225 +4,161 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Hritwik Ekade — Portfolio</title>
-  <meta name="description" content="Hritwik Ekade — MISM student & software engineer. Projects, resume, blog." />
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Hritwik Ekade — software engineer, MISM student. Projects, resume, blog." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-to-b from-white via-slate-50 to-indigo-50 text-slate-900 antialiased">
-  <header class="sticky top-0 bg-white/60 backdrop-blur z-40">
-    <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="#" class="text-2xl font-semibold text-indigo-600">Hritwik Ekade</a>
-      <div class="space-x-4">
-        <a href="#about" class="hover:underline">About</a>
-        <a href="#resume" class="hover:underline">Resume</a>
-        <a href="#projects" class="hover:underline">Projects</a>
-        <a href="#blog" class="hover:underline">Blog</a>
-        <a href="#contact" class="inline-flex items-center px-4 py-2 bg-indigo-600 text-white rounded-lg shadow hover:brightness-95">Contact</a>
-      </div>
-    </nav>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Hritwik Ekade</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+        <a href="#blog">Blog</a>
+        <a class="contact-btn" href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-12">
-    <!-- Hero -->
-    <section class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Hi — I’m Hritwik Ekade</h1>
-        <p class="mt-4 text-lg text-slate-700">
-          Master's student in Information Systems Management at Carnegie Mellon (MISM) and software engineer with experience in backend systems, ML, and data pipelines. I build fast, secure systems and data-driven ML solutions.
-        </p>
-        <div class="mt-6 flex gap-3">
-          <a href="#projects" class="px-5 py-3 bg-gradient-to-r from-indigo-500 to-purple-500 text-white rounded-lg shadow">See Projects</a>
-          <a href="#resume" class="px-5 py-3 border border-indigo-200 rounded-lg">View Resume</a>
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-left">
+        <h1>Hi — I'm <span class="accent">Hritwik Ekade</span></h1>
+        <p class="lead">MISM student at Carnegie Mellon • Software engineer experienced in backend systems, ML, and data pipelines. I build secure, scalable systems and production ML solutions.</p>
+
+        <div class="hero-actions">
+          <a href="projects.html" class="btn primary">See Projects</a>
+          <a href="#resume" class="btn">View Resume</a>
+          <a href="resume.pdf" download class="btn alt">Download Resume</a>
         </div>
-        <div class="mt-6 flex flex-wrap gap-2">
-          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">Python</span>
-          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">Java</span>
-          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">C#</span>
-          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">PyTorch</span>
-          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">AWS</span>
-          <span class="px-3 py-1 bg-indigo-50 text-indigo-700 rounded-full text-sm">React</span>
+
+        <div class="skills">
+          <span>Python</span><span>Java</span><span>C#</span><span>PyTorch</span><span>AWS</span><span>React</span>
         </div>
       </div>
 
-      <div class="bg-white rounded-2xl shadow-lg p-6">
-        <div class="text-center">
-          <div class="inline-block rounded-full bg-indigo-100 p-6">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 11c1.657 0 3-1.567 3-3.5S13.657 4 12 4s-3 1.567-3 3.5S10.343 11 12 11zM21 20v-1a4 4 0 00-4-4H7a4 4 0 00-4 4v1" />
-            </svg>
+      <aside class="hero-right">
+        <div class="profile-card">
+          <div class="avatar">
+            <img src="assets/profile.jpg" alt="Hritwik Ekade" onerror="this.onerror=null;this.src='assets/placeholder.svg'">
           </div>
-          <h3 class="mt-4 text-xl font-semibold">Contact</h3>
-          <p class="mt-2 text-sm text-slate-600">+1 (412) 339-7388 • ekadehritwik@gmail.com</p>
-          <div class="mt-4 flex justify-center gap-3">
-            <a href="https://linkedin.com/in/hritwikekade/" target="_blank" class="text-indigo-600 underline text-sm">LinkedIn</a>
-            <a href="https://github.com/yourusername" target="_blank" class="text-indigo-600 underline text-sm">GitHub</a>
-            <a href="https://scholar.google.com" target="_blank" class="text-indigo-600 underline text-sm">Google Scholar</a>
+          <h3>Hritwik Ekade</h3>
+          <p class="muted">MISM @ Carnegie Mellon • Software Engineer</p>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/hritwikekade/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://github.com/HritwikEkade" target="_blank" rel="noreferrer">GitHub</a>
+          </div>
+          <div class="quick-links">
+            <a href="projects.html">Featured Projects</a>
+            <a href="#contact">Contact</a>
           </div>
         </div>
+      </aside>
+    </section>
 
-        <div class="mt-6 border-t pt-4">
-          <h4 class="font-medium">Quick links</h4>
-          <ul class="mt-3 text-sm text-slate-700 space-y-2">
-            <li><a href="#projects" class="hover:underline">Featured Projects</a></li>
-            <li><a href="#resume" class="hover:underline">Resume / Experience</a></li>
-            <li><a href="#blog" class="hover:underline">Blog posts</a></li>
+    <!-- ABOUT -->
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>I am pursuing a Master of Information Systems Management (MISM) at Carnegie Mellon University. I have a Bachelor's in Computer Engineering from University of Mumbai and professional experience in backend engineering, data pipelines, and ML. I enjoy engineering for reliability, security, and performance.</p>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="resume" class="two-col">
+      <div class="card">
+        <h3>Education</h3>
+        <div class="item">
+          <strong>Carnegie Mellon University — Master of Information Systems Management</strong>
+          <span class="date">Aug 2026 — Dec 2026</span>
+          <div class="muted">Coursework: OOP with Java, Data-Focused Python, Database Management, Cloud Security, Advanced AI & Business Strategy</div>
+        </div>
+
+        <div class="item">
+          <strong>University of Mumbai — B. Tech in Computer Engineering (CGPA 3.86)</strong>
+          <span class="date">Aug 2018 — Jul 2022</span>
+          <div class="muted">Coursework: Advanced DS, NLP, HCI, OS, Networks</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Work Experience</h3>
+
+        <div class="item">
+          <strong>Deloitte — Consultant</strong>
+          <span class="date">Dec 2022 — Aug 2025</span>
+          <ul>
+            <li>Built .NET Core retirement systems (350K+ users, $40B assets) — security & compliance.</li>
+            <li>SQL optimization and caching reduced latency by ~200ms.</li>
+            <li>Optimized pipelines (1M+ records) — runtime down 30%.</li>
           </ul>
         </div>
-      </div>
-    </section>
 
-    <!-- About -->
-    <section id="about" class="mt-14">
-      <h2 class="text-2xl font-bold">About Me</h2>
-      <p class="mt-3 text-slate-700">
-        I am currently pursuing a Master of Information Systems Management at Carnegie Mellon University (MISM). I have a background in Computer Engineering from the University of Mumbai and professional experience in backend engineering, data pipelines, and ML model development. I enjoy building scalable systems and combining ML with strong engineering practices.
-      </p>
-    </section>
-
-    <!-- Resume -->
-    <section id="resume" class="mt-12">
-      <h2 class="text-2xl font-bold">Resume / Experience</h2>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow">
-          <h3 class="font-semibold">Education</h3>
-          <div class="mt-3 space-y-4 text-sm text-slate-700">
-            <div>
-              <div class="flex items-baseline justify-between">
-                <strong>Carnegie Mellon University — Master of Information Systems Management</strong>
-                <span class="text-xs text-slate-500">Aug 2026 — Dec 2026</span>
-              </div>
-              <div class="mt-1 text-xs">Coursework: OOP with Java, Data-Focused Python, Database Management, Cloud Security, Statistics for IT Managers, Advanced AI & Business Strategy</div>
-            </div>
-            <div>
-              <div class="flex items-baseline justify-between">
-                <strong>University of Mumbai — B. Tech in Computer Engineering (CGPA 3.86)</strong>
-                <span class="text-xs text-slate-500">Aug 2018 — Jul 2022</span>
-              </div>
-              <div class="mt-1 text-xs">Coursework: Advanced DS, NLP, HCI, OS, Networks, Theory</div>
-            </div>
-          </div>
+        <div class="item">
+          <strong>IIT Kharagpur — ML Intern</strong>
+          <span class="date">Jun 2020 — Aug 2020</span>
+          <div class="muted">Built CNN for plant leaf count prediction (92% accuracy), improved robustness and data augmentation pipelines.</div>
         </div>
 
-        <div class="bg-white rounded-xl p-6 shadow">
-          <h3 class="font-semibold">Work Experience</h3>
-          <div class="mt-3 space-y-4 text-sm text-slate-700">
-            <div>
-              <div class="flex items-baseline justify-between">
-                <strong>Deloitte — Consultant</strong>
-                <span class="text-xs text-slate-500">Dec 2022 — Aug 2025</span>
-              </div>
-              <ul class="mt-2 list-disc ml-5">
-                <li>Built .NET Core retirement systems for stakeholders — system served 350K+ users and managed $40B+ assets (security & compliance).</li>
-                <li>Implemented SQL optimization and backend caching that reduced transaction latency by ~200ms.</li>
-                <li>Optimized batch data pipelines (1M+ records), reducing runtime by 30% and downtime by 20%.</li>
-              </ul>
-            </div>
-
-            <div>
-              <div class="flex items-baseline justify-between">
-                <strong>IIT Kharagpur — Intern, Machine Learning</strong>
-                <span class="text-xs text-slate-500">Jun 2020 — Aug 2020</span>
-              </div>
-              <div class="mt-2 text-xs">Built CNN for plant leaf count prediction (92% accuracy), improved model robustness with preprocessing and augmentation.</div>
-            </div>
-
-            <div>
-              <div class="flex items-baseline justify-between">
-                <strong>VESIT — Intern, Python Developer</strong>
-                <span class="text-xs text-slate-500">Nov 2019 — Dec 2019</span>
-              </div>
-              <div class="mt-2 text-xs">Automated certificate generation using Tesseract OCR; reduced processing time by 80%.</div>
-            </div>
-          </div>
+        <div class="item">
+          <strong>VESIT — Python Intern</strong>
+          <span class="date">Nov 2019 — Dec 2019</span>
+          <div class="muted">Automated Leaving Certificate generation using Tesseract OCR (80% time reduction).</div>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects" class="mt-12">
-      <h2 class="text-2xl font-bold">Projects</h2>
-      <div class="mt-6 grid md:grid-cols-3 gap-6">
-        <!-- Project Card 1 -->
-        <article class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold">Educational Query Bot</h3>
-          <p class="mt-2 text-sm text-slate-600">End-to-end NLP QA system that processes lecture videos, uses ASR + BERT/ALBERT for contextual retrieval and QA.</p>
-          <div class="mt-3 text-xs text-slate-500">Tech: Python, BERT, ASR, Flask</div>
-          <div class="mt-4">
-            <a href="projects.html#edu-bot" class="text-indigo-600 text-sm">Read more →</a>
-          </div>
+    <!-- PROJECTS PREVIEW -->
+    <section id="projects" class="card">
+      <h2>Selected Projects</h2>
+      <div class="projects-grid">
+        <!-- Project cards are generated by script.js but here's static fallback -->
+        <article class="project">
+          <div class="project-image"><img src="assets/placeholder.svg" alt=""></div>
+          <h4>Educational Query Bot</h4>
+          <p>End-to-end NLP QA for lecture videos — ASR + BERT/ALBERT retrieval and contextual answers.</p>
+          <div class="meta"><span>Python</span><span>BERT</span><span>Flask</span></div>
+          <div class="project-links"><a href="projects.html#edu-bot">Show project</a><a href="#" target="_blank">GitHub</a></div>
         </article>
 
-        <!-- Project Card 2 -->
-        <article class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold">EVs, GHG & Indian Auto Sector</h3>
-          <p class="mt-2 text-sm text-slate-600">Time-series forecasting project (ARIMA/Prophet) modeling EV adoption impact on greenhouse gas emissions. Published on IEEE.</p>
-          <div class="mt-3 text-xs text-slate-500">Tech: Python, Prophet, Scikit-learn</div>
-          <div class="mt-4">
-            <a href="projects.html#ev-ghg" class="text-indigo-600 text-sm">Read more →</a>
-          </div>
+        <article class="project">
+          <div class="project-image"><img src="assets/placeholder.svg" alt=""></div>
+          <h4>EVs, GHG & Indian Auto Sector</h4>
+          <p>Time-series forecasting (ARIMA/Prophet) modeling EV adoption impact on GHG emissions. IEEE publication.</p>
+          <div class="meta"><span>Python</span><span>Prophet</span></div>
+          <div class="project-links"><a href="projects.html#ev-ghg">Show project</a><a href="#" target="_blank">Paper</a></div>
         </article>
 
-        <!-- Project Card 3 -->
-        <article class="bg-white p-5 rounded-xl shadow hover:shadow-lg transition">
-          <h3 class="font-semibold">Data Pipeline Optimization</h3>
-          <p class="mt-2 text-sm text-slate-600">Backend and ETL improvements that reduced batch processing times by 30% and improved reliability for high-volume jobs.</p>
-          <div class="mt-3 text-xs text-slate-500">Tech: SQL, Python, Docker</div>
-          <div class="mt-4">
-            <a href="projects.html#data-pipeline" class="text-indigo-600 text-sm">Read more →</a>
-          </div>
+        <article class="project">
+          <div class="project-image"><img src="assets/placeholder.svg" alt=""></div>
+          <h4>Image Super Resolution (SRCNN)</h4>
+          <p>Recover high-resolution images using SRCNN (Keras). Evaluated with PSNR, MSE, SSIM. Paper: arXiv/1501.00092</p>
+          <div class="meta"><span>Keras</span><span>TensorFlow</span></div>
+          <div class="project-links"><a href="projects.html#srcnn">Show project</a><a href="https://arxiv.org/abs/1501.00092" target="_blank">Paper</a></div>
         </article>
       </div>
+      <div class="more"><a href="projects.html" class="btn">View all projects</a></div>
     </section>
 
-    <!-- Blog -->
-    <section id="blog" class="mt-12">
-      <h2 class="text-2xl font-bold">Blog</h2>
-      <p class="mt-3 text-slate-700">I write about machine learning, software engineering, and product strategy.</p>
-      <div class="mt-6 space-y-4">
-        <article class="bg-white p-4 rounded-lg shadow">
-          <a href="blog.html#post1" class="font-medium text-indigo-600">How I approach ML model productionization</a>
-          <p class="mt-2 text-sm text-slate-600">Practical steps to move models from notebooks to production-grade services.</p>
-        </article>
-
-        <article class="bg-white p-4 rounded-lg shadow">
-          <a href="blog.html#post2" class="font-medium text-indigo-600">Designing secure systems for public sector applications</a>
-          <p class="mt-2 text-sm text-slate-600">Notes from building compliance-driven retirement systems.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="mt-12 mb-20">
-      <h2 class="text-2xl font-bold">Contact</h2>
-      <p class="mt-3 text-slate-700">Interested in collaborating? Reach out via email or LinkedIn.</p>
-      <div class="mt-6 grid md:grid-cols-2 gap-6">
-        <div class="bg-white p-6 rounded-xl shadow">
-          <h4 class="font-semibold">Email</h4>
-          <p class="mt-2 text-slate-700">ekadehritwik@gmail.com</p>
-          <button onclick="copyEmail()" class="mt-4 px-4 py-2 border rounded-lg">Copy email</button>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow">
-          <h4 class="font-semibold">Connect</h4>
-          <p class="mt-2 text-slate-700">LinkedIn: <a href="https://linkedin.com/in/hritwikekade/" target="_blank" class="text-indigo-600 underline">linkedin.com/in/hritwikekade</a></p>
-          <p class="mt-2 text-slate-700">Phone: +1 (412) 339-7388</p>
-        </div>
-      </div>
+    <!-- CONTACT -->
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <p>Reach me at <a href="mailto:ekadehritwik@gmail.com">ekadehritwik@gmail.com</a> or connect on <a href="https://www.linkedin.com/in/hritwikekade/" target="_blank">LinkedIn</a>.</p>
+      <p class="muted">Phone: +1 (412) 339-7388</p>
     </section>
   </main>
 
-  <footer class="bg-white/60 border-t py-6">
-    <div class="max-w-5xl mx-auto px-6 text-sm text-slate-600">
-      © <span id="year"></span> Hritwik Ekade — Built with ♥ • <a href="README.md" class="underline">Source</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Hritwik Ekade</div>
+      <div class="footer-links">
+        <a href="https://github.com/HritwikEkade" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/hritwikekade/" target="_blank">LinkedIn</a>
+      </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
-    function copyEmail() {
-      navigator.clipboard.writeText('ekadehritwik@gmail.com').then(() => {
-        alert('Email copied to clipboard');
-      });
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
