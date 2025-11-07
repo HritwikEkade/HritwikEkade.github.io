@@ -4,38 +4,64 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Hritwik Ekade</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-gradient-to-b from-white via-slate-50 to-indigo-50 text-slate-900">
-  <header class="max-w-5xl mx-auto px-6 py-6">
-    <a href="index.html" class="text-indigo-600 font-semibold">&larr; Back</a>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">&larr; Back</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-6 py-6">
-    <h1 class="text-3xl font-bold">Projects</h1>
+  <main class="container">
+    <h1>Projects</h1>
 
-    <section id="edu-bot" class="mt-6 bg-white p-6 rounded-xl shadow">
-      <h2 class="text-xl font-semibold">Educational Query Bot</h2>
-      <p class="mt-3 text-slate-700">An end-to-end pipeline that takes lecture videos, transcribes them, indexes semantic embeddings and answers student queries with contextual passages. Uses ASR, BERT/ALBERT for retrieval and an ALBERT-based model for concise answers.</p>
-      <h4 class="mt-4 font-medium">Tech</h4>
-      <p class="text-sm text-slate-600">Python, ASR, BERT, Flask, Docker</p>
-    </section>
+    <article id="edu-bot" class="project-full card">
+      <h2>Educational Query Bot</h2>
+      <p><strong>Description:</strong> End-to-end NLP QA system that processes lecture videos, transcribes audio (ASR), builds semantic embeddings with BERT and retrieves context-aware answers using ALBERT. Designed for educational use-cases and scalable retrieval.</p>
+      <p><strong>Tech:</strong> Python, ASR, BERT, ALBERT, Flask, Docker</p>
+    </article>
 
-    <section id="ev-ghg" class="mt-6 bg-white p-6 rounded-xl shadow">
-      <h2 class="text-xl font-semibold">EVs, GHG, and Indian Auto Sector</h2>
-      <p class="mt-3 text-slate-700">Time-series forecasting project modeling EV adoption and greenhouse gas emissions. Produced policy recommendations backed by ARIMA & Prophet models. Published on IEEE Xplore (see resume).</p>
-      <h4 class="mt-4 font-medium">Tech</h4>
-      <p class="text-sm text-slate-600">Python, Prophet, Scikit-learn, Data visualization</p>
-    </section>
+    <article id="ev-ghg" class="project-full card">
+      <h2>EVs, GHG, and Indian Auto Sector</h2>
+      <p><strong>Description:</strong> Time-series forecasting to model the impact of EV adoption on greenhouse gas emissions. Built ARIMA and Prophet models, performed policy analysis and produced visualizations for stakeholders. Published on IEEE Xplore.</p>
+      <p><strong>Tech:</strong> Python, Prophet, Scikit-learn, Pandas, Data viz</p>
+    </article>
 
-    <section id="data-pipeline" class="mt-6 bg-white p-6 rounded-xl shadow">
-      <h2 class="text-xl font-semibold">Data Pipeline Optimization</h2>
-      <p class="mt-3 text-slate-700">Optimized ETL and batch job processing for large datasets; performance tuning and caching reduced runtime by ~30% and improved reliability for production workflows.</p>
-      <h4 class="mt-4 font-medium">Tech</h4>
-      <p class="text-sm text-slate-600">SQL, Python, Docker, Cloud</p>
-    </section>
+    <article id="srcnn" class="project-full card">
+      <h2>Image Super Resolution (SRCNN)</h2>
+      <p><strong>Goal:</strong> Recover a high-resolution image from a low-resolution input using SRCNN (Chao Dong et al., 2014).</p>
+      <p><strong>Details:</strong> Implemented SRCNN in Keras, trained on example datasets, evaluated with PSNR, MSE and SSIM. Employed data augmentation and tuned learning schedules to improve reconstruction quality.</p>
+      <p><strong>Paper:</strong> <a href="https://arxiv.org/abs/1501.00092" target="_blank">Image Super-Resolution Using Deep Convolutional Networks (arXiv)</a></p>
+      <p><strong>Tech:</strong> Keras, TensorFlow, Python, OpenCV</p>
+    </article>
 
+    <article id="life-exp" class="project-full card">
+      <h2>Life Expectancy Prediction</h2>
+      <p><strong>Description:</strong> Modelled life expectancy using WHO datasets. Compared linear regression, random forest and gradient boosting methods with cross-validation and feature engineering to select important indicators.</p>
+      <p><strong>Tech:</strong> Python, Pandas, Scikit-learn</p>
+    </article>
+
+    <article id="ocr" class="project-full card">
+      <h2>Optical Character Recognition (OCR) — Leaving Certificate Generator</h2>
+      <p><strong>Description:</strong> Automated generation of Leaving Certificate: system validates uploaded images/PDFs using OCR and image checks, then generates a formatted certificate when validation passes.</p>
+      <p><strong>Tech:</strong> Python, Tesseract OCR, OpenCV</p>
+    </article>
   </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year2"></span> Hritwik Ekade</div>
+      <div class="footer-links"><a href="https://github.com/HritwikEkade">GitHub</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year2').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
